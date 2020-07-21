@@ -63,7 +63,8 @@ DEFAULT_REQUEST_HEADERS = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'booking_scrape.pipelines.BookingScrapeJSONPipeline': 300,
+    # 'booking_scrape.pipelines.BookingScrapeJSONPipeline': 300,
+    'booking_scrape.pipelines.DatabasePipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -86,3 +87,10 @@ ITEM_PIPELINES = {
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+DB_SETTINGS = {
+    'db': "booking_db",
+    'user': 'root',
+    'passwd': 'booking',
+    'host': '0.0.0.0',
+}

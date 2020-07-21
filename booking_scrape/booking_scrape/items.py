@@ -14,7 +14,6 @@ class BookingScrapeItem(scrapy.Item):
 
     score_category = scrapy.Field()
     score = scrapy.Field()
-    # perks = scrapy.Field()
 
     description = scrapy.Field()
     host_info = scrapy.Field()
@@ -25,3 +24,4 @@ class BookingScrapeItem(scrapy.Item):
     house_rules = scrapy.Field()
     fine_print = scrapy.Field()
     faq = scrapy.Field()
+    hotel_url = scrapy.Field()
